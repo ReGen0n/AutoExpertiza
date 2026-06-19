@@ -6,7 +6,6 @@ import {
     Phone,
     Mail,
     MapPin,
-    MessageCircle,
     Calculator,
     Gavel,
     BadgeCheck,

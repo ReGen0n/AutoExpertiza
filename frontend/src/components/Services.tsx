@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+
 import { services } from "../data/siteData";
 
 export default function Services() {
@@ -15,24 +15,20 @@ export default function Services() {
                 </div>
 
                 <div className="cards-grid services-wide">
-                    {services.map((item, index) => {
+                    {services.map((item) => {
                         const Icon = item.icon;
 
                         return (
-                            <motion.div
+                            <div
                                 className="glass-card"
                                 key={item.title}
-                                initial={{ opacity: 0, y: 24 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.06 }}
                             >
                                 <div className="card-icon">
                                     <Icon size={24} />
                                 </div>
                                 <h3>{item.title}</h3>
                                 <p>{item.text}</p>
-                            </motion.div>
+                            </div>
                         );
                     })}
                 </div>

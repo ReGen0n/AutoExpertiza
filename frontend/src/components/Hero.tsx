@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+
 import { ArrowRight, Phone } from "lucide-react";
 import { contacts } from "../data/siteData";
 
@@ -10,10 +10,7 @@ export default function Hero() {
             <div className="hero-grid" />
 
             <div className="container hero-inner">
-                <motion.div
-                    initial={{ opacity: 0, y: 36 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                <div
                     className="hero-content"
                 >
                     <div className="badge">
@@ -54,12 +51,9 @@ export default function Hero() {
                             <span>оцінка</span>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.94 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.9, delay: 0.15 }}
+                <div
                     className="hero-card"
                 >
                     <div className="car-image">
@@ -73,7 +67,7 @@ export default function Hero() {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );
