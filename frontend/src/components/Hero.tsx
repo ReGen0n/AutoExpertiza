@@ -30,7 +30,7 @@ export default function Hero() {
 
                     <div className="hero-actions">
                         <a href="#contact" className="primary-btn">
-                            Отримати консультацію <ArrowRight size={18} />
+                            Отримати безкоштовну консультацію <ArrowRight size={18} />
                         </a>
                         <a href={contacts.phoneHref1} className="secondary-btn">
                             <Phone size={18} /> Подзвонити
@@ -52,14 +52,18 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
-
+                <div className="hero-phones">
+                    <a href="tel:+380670000000">+38 (067) 000-00-00</a>
+                    <a href="tel:+380500000000">+38 (050) 000-00-00</a>
+                    <a href="tel:+380930000000">+38 (093) 000-00-00</a>
+                </div>
                 <div
                     className="hero-card"
                 >
                     <div className="car-image">
                         <div className="report-card">
                             <span>Експертні послуги</span>
-                            <h3>{contacts.name}</h3>
+                            <h3>25+ років професійного досвіду</h3>
                             <div>
                                 <small>ДТП</small>
                                 <small>Оцінка</small>

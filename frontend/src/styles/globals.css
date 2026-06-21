@@ -194,9 +194,9 @@ select {
 
 .hero h1 span,
 .price-card h2 span {
-    background: linear-gradient(135deg, #ffffff, #9ca3af 45%, #60a5fa);
-    -webkit-background-clip: text;
-    color: transparent;
+    background: none;
+    color: #fff;
+    -webkit-background-clip: initial;
 }
 
 .hero p {
@@ -776,4 +776,64 @@ select {
             grid-template-columns: 1fr;
         }
     }
+}
+.nav-order {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-phone-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 14px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.15);
+    backdrop-filter: blur(20px);
+}
+
+.nav-phone-card a {
+    color: #f8f3e7;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-phone-card a:hover {
+    color: white;
+}
+
+@media (max-width: 980px) {
+    .nav-order {
+        display: none;
+    }
+}
+.hero-inner {
+    position: relative;
+}
+
+.hero-phones {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+.hero-phones {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 10px 14px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.15);
+    backdrop-filter: blur(20px);
 }

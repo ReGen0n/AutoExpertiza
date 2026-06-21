@@ -12,13 +12,19 @@ export default function Navbar() {
         ["Контакти", "#contact"],
     ];
 
+    const phones = [
+        "+38 (067) 000-00-00",
+        "+38 (050) 000-00-00",
+        "+38 (093) 000-00-00",
+    ];
+
     return (
         <header className="navbar">
             <div className="container nav-inner">
                 <a href="#" className="logo">
-          <span className="logo-icon">
-            <Sparkles size={18} />
-          </span>
+                    <span className="logo-icon">
+                        <Sparkles size={18} />
+                    </span>
                     AutoExpert Kyiv
                 </a>
 
@@ -30,9 +36,12 @@ export default function Navbar() {
                     ))}
                 </nav>
 
-                <a className="nav-button" href="#contact">
-                    Замовити
-                </a>
+                <div className="nav-order">
+                    <a className="nav-button" href="#contact">
+                        Замовити
+                    </a>
+
+                </div>
 
                 <button className="menu-btn" onClick={() => setOpen(!open)}>
                     {open ? <X /> : <Menu />}
@@ -46,6 +55,18 @@ export default function Navbar() {
                             {label}
                         </a>
                     ))}
+
+                    <a className="nav-button mobile-order-btn" href="#contact" onClick={() => setOpen(false)}>
+                        Замовити
+                    </a>
+
+                    <div className="mobile-phones">
+                        {phones.map((phone) => (
+                            <a key={phone} href={`tel:${phone.replace(/[^\d+]/g, "")}`}>
+                                {phone}
+                            </a>
+                        ))}
+                    </div>
                 </div>
             )}
         </header>
