@@ -3,7 +3,7 @@ import type { FormEvent } from "react";
 import { ArrowRight } from "lucide-react";
 import { contactCards, contacts } from "../data/siteData";
 
-const API_URL: string = '${import.meta.env.VITE_API_URL}/api/contact';
+const API_URL: string = `${import.meta.env.VITE_API_URL}/api/contact`;
 
 export default function Contact() {
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
