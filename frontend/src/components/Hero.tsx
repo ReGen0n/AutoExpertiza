@@ -53,9 +53,9 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="hero-phones">
-                    <a href="tel:+380670000000">+38 (067) 000-00-00</a>
-                    <a href="tel:+380500000000">+38 (050) 000-00-00</a>
-                    <a href="tel:+380930000000">+38 (093) 000-00-00</a>
+                    <a href="tel:+380506074430">+38 (050) 607-44-30</a>
+                    <a href="tel:+380964447175">+38 (096) 444-71-75</a>
+                    <a href="tel:+380635391570">+38 (063) 539-15-70</a>
                 </div>
                 <div
                     className="hero-card"
