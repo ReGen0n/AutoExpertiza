@@ -14,16 +14,13 @@ export default function Process() {
                 </div>
 
                 <div className="process-list">
-                    {process.map((item, index) => (
-                        <div className="process-item" key={item}>
-                            <div>{index + 1}</div>
-                            <h3>{item}</h3>
-                            <p>
-                                На кожному етапі ви отримуєте зрозуміле пояснення та практичну
-                                рекомендацію щодо подальших дій.
-                            </p>
-                        </div>
-                    ))}
+                        {process.map((item, index) => (
+                            <div className="process-item" key={item.title}>
+                                <div>{index + 1}</div>
+                                <h3>{item.title}</h3>
+                                <p>{item.description}</p>
+                            </div>
+                        ))}
                 </div>
             </div>
         </section>

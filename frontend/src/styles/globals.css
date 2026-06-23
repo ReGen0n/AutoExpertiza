@@ -390,14 +390,41 @@ select {
 }
 
 .glass-card {
+    position: relative;
+    overflow: hidden;
     padding: 28px;
     border-radius: 32px;
-    transition: 0.25s ease;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+            0 8px 32px rgba(0,0,0,.25),
+            inset 0 1px 1px rgba(255,255,255,.08);
+
+    transition: .3s ease;
 }
 
 .glass-card:hover {
     transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.075);
+    background: rgba(255,255,255,.08);
+    border-color: rgba(255,255,255,.2);
+    box-shadow:
+            0 15px 40px rgba(0,0,0,.35),
+            inset 0 1px 1px rgba(255,255,255,.12);
+}
+.glass-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            transparent 35%
+    );
+
+    pointer-events: none;
 }
 
 .card-icon {
@@ -479,8 +506,23 @@ select {
 }
 
 .process-item {
+    position: relative;
+    overflow: hidden;
+
     padding: 24px;
     border-radius: 28px;
+
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.12);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+            0 8px 32px rgba(0,0,0,.25),
+            inset 0 1px 1px rgba(255,255,255,.08);
+
+    transition: .3s ease;
 }
 
 .process-item div {
@@ -489,9 +531,11 @@ select {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background: white;
-    color: black;
+    background: rgba(255,255,255,.9);
+    color: #111;
     font-weight: 900;
+    box-shadow:
+            0 8px 25px rgba(255,255,255,.15);
 }
 
 .process-item h3 {
@@ -504,6 +548,30 @@ select {
     color: rgba(255, 255, 255, 0.5);
     line-height: 1.6;
     font-size: 14px;
+}
+.process-item:hover {
+    transform: translateY(-4px);
+
+    background: rgba(255,255,255,.08);
+    border-color: rgba(255,255,255,.2);
+
+    box-shadow:
+            0 15px 40px rgba(0,0,0,.35),
+            inset 0 1px 1px rgba(255,255,255,.12);
+}
+
+.process-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            transparent 35%
+    );
+
+    pointer-events: none;
 }
 
 .price-card {
@@ -784,7 +852,7 @@ select {
 }
 
 .nav-phone-card {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 6px;
     padding: 10px 14px;
@@ -836,4 +904,27 @@ select {
     background: rgba(255,255,255,.07);
     border: 1px solid rgba(255,255,255,.15);
     backdrop-filter: blur(20px);
+}
+.mobile-phones {
+    display: none;
+}
+
+@media (max-width: 980px) {
+    .mobile-phones {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+    .mobile-phones a {
+        display: block;
+        line-height: 1.25;
+        white-space: nowrap;
+    }
+
+    .hero-phones {
+        display: none;
+    }
 }

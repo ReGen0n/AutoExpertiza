@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, Sparkles, X } from "lucide-react";
+import { contacts } from "../data/siteData";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -13,9 +14,9 @@ export default function Navbar() {
     ];
 
     const phones = [
-        "+38 (050) 607-44-30",
-        "+38 (096) 444-71-75",
-        "+38 (063) 539-15-70",
+        { text: "+38 " + contacts.phone1, href: contacts.phoneHref1 },
+        { text: "+38 " + contacts.phone2, href: contacts.phoneHref2 },
+        { text: "+38 " + contacts.phone3, href: contacts.phoneHref3 },
     ];
 
     return (
@@ -56,14 +57,10 @@ export default function Navbar() {
                         </a>
                     ))}
 
-                    <a className="nav-button mobile-order-btn" href="#contact" onClick={() => setOpen(false)}>
-                        Замовити
-                    </a>
-
                     <div className="mobile-phones">
                         {phones.map((phone) => (
-                            <a key={phone} href={`tel:${phone.replace(/[^\d+]/g, "")}`}>
-                                {phone}
+                            <a key={phone.href} href={phone.href}>
+                                {phone.text}
                             </a>
                         ))}
                     </div>
