@@ -192,13 +192,6 @@ select {
     letter-spacing: -0.07em;
 }
 
-.hero h1 span,
-.price-card h2 span {
-    background: none;
-    color: #fff;
-    -webkit-background-clip: initial;
-}
-
 .hero p {
     max-width: 660px;
     margin: 28px 0 0;
@@ -927,4 +920,19 @@ select {
     .hero-phones {
         display: none;
     }
+}
+.hero h1 .gradient-text {
+    display: inline-block;
+
+    background: linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #b7ffd5 30%,
+            #00c853 65%,
+            #ffffff 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
